@@ -1,9 +1,9 @@
-(pcb "/home/jason/backedup/backed up 200516/jasons stuff/non theocratic/electonics related/inverter/ozinverterkicad modded/ozinverterkicad.dsn"
+(pcb "/home/jason/databackup/non theocratic/electonics related/inverter/ozinverterkicad modded/ozinverterkicad.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
     (host_cad "KiCad's Pcbnew")
-    (host_version "4.0.4+e1-6308~48~ubuntu14.04.1-stable")
+    (host_version "4.0.7-e1-6374~58~ubuntu14.04.1")
   )
   (resolution um 10)
   (unit um)
@@ -21,15 +21,9 @@
       )
     )
     (boundary
-      (path pcb 0  74218.8 -50876.2  74218.8 -150876  174244 -150876  174244 -50876.2
-            74218.8 -50876.2  74218.8 -50876.2)
+      (path pcb 0  173990 -50800  74168 -50800  74168 -150622  173990 -150622
+            173990 -50800  173990 -50800)
     )
-    (plane GND (polygon B.Cu 0  75123 -95300.8  81523.8 -95300.8  85877.4 -90947.2  104460 -90947.2
-            104460 -51054  173228 -51054  173228 -149606  74589.6 -149606
-            74589.6 -95138.2))
-    (plane +5V (polygon F.Cu 0  74676 -95214.4  81422.2 -95214.4  85775.8 -90860.9  104775 -90860.9
-            104775 -51181  173446 -51181  173446 -149885  74411.8 -149885
-            74411.8 -95250))
     (via "Via[0-1]_600:400_um")
     (rule
       (width 250)
@@ -93,7 +87,7 @@
     (component "LEDs:LED-5MM"
       (place D5 170434 -95758 front 180 (PN LED))
       (place D14 170434 -104013 front 180 (PN LED))
-      (place D16 166624 -71374 front 0 (PN "oc-fast"))
+      (place D16 166624 -71374 front 0 (PN LED))
     )
     (component Connect:IDC_Header_Straight_10pins
       (place P1 82054.7 -135928 front 90 (PN CONN_02X05))
@@ -105,7 +99,7 @@
       (place P5 169418 -140868 front 90 (PN "ct sense"))
       (place P8 169266 -133731 front 90 (PN systemled))
       (place JP1 167640 -56642 front 90 (PN reset))
-      (place p1 167386 -64008 front 90 (PN "ct sensefast"))
+      (place p1 167386 -64008 front 90 (PN "ct sense"))
     )
     (component Connect:1pin
       (place P6 78105 -90805 front 0 (PN "Active mains"))
@@ -145,8 +139,6 @@
     )
     (component Discret:RV2X4
       (place voltageout1 117856 -79451.2 front 90 (PN 500r))
-      (place "oc-slow" 140716 -128524 front 0 (PN 2k))
-      (place ctfast 136398 -55880 front 180 (PN 2k))
     )
     (component "Crystals:Crystal_HC49-U_Vertical"
       (place Y1 147942 -83096.1 front 270 (PN "12MHZ Crystal"))
@@ -159,6 +151,10 @@
     )
     (component "TO_SOT_Packages_THT:TO-92_Molded_Narrow"
       (place U5 158750 -105410 front 90 (PN mcr100))
+    )
+    (component Potentiometers:Potentiometer_Trimmer_ACP_CA9v_Horizontal_Px10.0mm_Py5.0mm
+      (place RV1 133096 -131826 front 0 (PN 2k))
+      (place RV2 133350 -59563 front 0 (PN 2k))
     )
   )
   (library
@@ -583,6 +579,41 @@
       (pin Round[A]Pad_1000.76_um (rotate 90) 3 2540 0)
       (pin Round[A]Pad_1000.76_um (rotate 90) 1 0 0)
     )
+    (image Potentiometers:Potentiometer_Trimmer_ACP_CA9v_Horizontal_Px10.0mm_Py5.0mm
+      (outline (path signal 100  6500 2500  6426.59 2036.47  6213.52 1618.32  5881.68 1286.47
+            5463.52 1073.41  5000 1000  4536.48 1073.41  4118.32 1286.47
+            3786.47 1618.32  3573.41 2036.47  3500 2500  3573.41 2963.53
+            3786.47 3381.68  4118.32 3713.53  4536.48 3926.59  5000 4000
+            5463.52 3926.59  5881.68 3713.53  6213.52 3381.68  6426.59 2963.53))
+      (outline (path signal 100  6050 2500  5998.61 2175.53  5849.47 1882.83  5617.18 1650.53
+            5324.47 1501.39  5000 1450  4675.53 1501.39  4382.82 1650.53
+            4150.53 1882.83  4001.39 2175.53  3950 2500  4001.39 2824.47
+            4150.53 3117.18  4382.82 3349.47  4675.53 3498.61  5000 3550
+            5324.47 3498.61  5617.18 3349.47  5849.47 3117.18  5998.61 2824.47))
+      (outline (path signal 120  6050 2500  5998.61 2175.53  5849.47 1882.83  5617.18 1650.53
+            5324.47 1501.39  5000 1450  4675.53 1501.39  4382.82 1650.53
+            4150.53 1882.83  4001.39 2175.53  3950 2500  4001.39 2824.47
+            4150.53 3117.18  4382.82 3349.47  4675.53 3498.61  5000 3550
+            5324.47 3498.61  5617.18 3349.47  5849.47 3117.18  5998.61 2824.47))
+      (outline (path signal 100  0 7400  0 -2400))
+      (outline (path signal 100  0 -2400  10000 -2400))
+      (outline (path signal 100  10000 -2400  10000 7400))
+      (outline (path signal 100  10000 7400  0 7400))
+      (outline (path signal 120  -60 7461  10060 7461))
+      (outline (path signal 120  -60 -2460  10060 -2460))
+      (outline (path signal 120  -60 7461  -60 6365))
+      (outline (path signal 120  -60 3635  -60 1365))
+      (outline (path signal 120  -60 -1365  -60 -2460))
+      (outline (path signal 120  10060 7461  10060 3865))
+      (outline (path signal 120  10060 1135  10060 -2460))
+      (outline (path signal 50  -1450 7650  -1450 -2700))
+      (outline (path signal 50  -1450 -2700  11450 -2700))
+      (outline (path signal 50  11450 -2700  11450 7650))
+      (outline (path signal 50  11450 7650  -1450 7650))
+      (pin Round[A]Pad_2340_um 3 0 5000)
+      (pin Round[A]Pad_2340_um 2 10000 2500)
+      (pin Round[A]Pad_2340_um 1 0 0)
+    )
     (padstack Round[A]Pad_1000.76_um
       (shape (circle F.Cu 1000.76))
       (shape (circle B.Cu 1000.76))
@@ -621,6 +652,11 @@
     (padstack Round[A]Pad_2032_um
       (shape (circle F.Cu 2032))
       (shape (circle B.Cu 2032))
+      (attach off)
+    )
+    (padstack Round[A]Pad_2340_um
+      (shape (circle F.Cu 2340))
+      (shape (circle B.Cu 2340))
       (attach off)
     )
     (padstack Round[A]Pad_4064_um
@@ -686,14 +722,14 @@
   )
   (network
     (net +12V
-      (pins C1-1 C2-1 C3-2 C4-1 C5-2 C8-1 C9-1 D2-2 D3-2 Q2-3 R3-1 U1-3 U2-3 U4-1
+      (pins C1-1 C2-1 C3-2 C4-1 C5-2 C8-1 C9-1 D2-2 D3-2 Q2-3 R3-1 U1-3 U2-3 U4-2
         R2-1)
     )
     (net GND
       (pins C1-2 C2-2 C3-1 C5-1 C9-2 C14-2 C15-2 C16-2 C17-1 C18-2 C19-1 C20-2 C21-2
-        C22-2 D4-2 D7-2 D8-2 D12-2 D13-2 D14-1 P1-1 P1-2 P8-2 R6-2 R9-1 U1-2 U1-13
-        U2-2 U2-13 U3-1 U3-2 U3-3 U3-4 U3-9 U3-12 U3-16 U3-18 U3-19 U3-20 U3-32 U4-2
-        U4-3 D15-2 D16-1 R1-2 "oc-slow"-1)
+        C22-2 D4-2 D7-2 D8-2 D12-2 D13-2 D14-1 P1-9 P1-10 P8-2 R6-2 R9-1 U1-2 U1-13
+        U2-2 U2-13 U3-1 U3-2 U3-3 U3-4 U3-9 U3-12 U3-16 U3-18 U3-19 U3-20 U3-32 U4-1
+        U4-4 D15-2 D16-1 R1-2 RV1-1)
     )
     (net "Net-(C6-Pad1)"
       (pins C6-1 D2-1 U1-6)
@@ -766,19 +802,19 @@
       (pins D14-2 R13-2)
     )
     (net "Net-(P1-Pad3)"
-      (pins P1-3 U1-1)
+      (pins P1-3 U1-7)
     )
     (net "Net-(P1-Pad4)"
       (pins P1-4 U2-7)
     )
     (net "Net-(P1-Pad7)"
-      (pins P1-7 U1-7)
+      (pins P1-7 U1-1)
     )
     (net "Net-(P1-Pad8)"
       (pins P1-8 U2-1)
     )
     (net +48V
-      (pins P1-9 P1-10 U4-4)
+      (pins P1-1 P1-2 U4-3)
     )
     (net "Net-(P2-Pad1)"
       (pins P2-1 R5-2)
@@ -790,13 +826,13 @@
       (pins R4-1 R5-1 U3-8)
     )
     (net "Net-(R8-Pad1)"
-      (pins R8-1 "oc-slow"-2)
+      (pins R8-1 RV1-2)
     )
     (net "Net-(R9-Pad2)"
       (pins R9-2 voltageout1-1)
     )
     (net "Net-(R10-Pad2)"
-      (pins R10-2 "oc-slow"-3)
+      (pins R10-2 RV1-3)
     )
     (net "Net-(R12-Pad2)"
       (pins R12-2 voltageout1-3)
@@ -817,13 +853,13 @@
       (pins C4-2 C8-2)
     )
     (net "Net-(C24-Pad1)"
-      (pins C24-1 R15-1 ctfast-2)
+      (pins C24-1 R15-1 RV2-2)
     )
     (net "Net-(C24-Pad2)"
-      (pins P3-1 P4-1 R7-1 C24-2 C25-2 D1-2 D18-2 D19-2 R16-1 ctfast-3 U5-1)
+      (pins P3-1 P4-1 R7-1 C24-2 C25-2 D1-2 D18-2 D19-2 R16-1 U5-1 RV2-3)
     )
     (net "Net-(C25-Pad1)"
-      (pins C25-1 R17-2 ctfast-1)
+      (pins C25-1 R17-2 RV2-1)
     )
     (net "Net-(D15-Pad1)"
       (pins D15-1 JP1-1 R2-2)
@@ -846,21 +882,20 @@
     (net "Net-(R15-Pad2)"
       (pins R15-2 U5-2)
     )
-    (class kicad_default "" +12V +48V +5V GND "Net-(C10-Pad2)" "Net-(C11-Pad2)"
-      "Net-(C16-Pad1)" "Net-(C17-Pad2)" "Net-(C18-Pad1)" "Net-(C19-Pad2)"
-      "Net-(C20-Pad1)" "Net-(C21-Pad1)" "Net-(C22-Pad1)" "Net-(C23-Pad1)"
-      "Net-(C23-Pad2)" "Net-(C24-Pad1)" "Net-(C24-Pad2)" "Net-(C25-Pad1)"
-      "Net-(C4-Pad2)" "Net-(C6-Pad1)" "Net-(C6-Pad2)" "Net-(C7-Pad1)" "Net-(C7-Pad2)"
-      "Net-(D10-Pad1)" "Net-(D10-Pad2)" "Net-(D11-Pad2)" "Net-(D14-Pad2)"
-      "Net-(D15-Pad1)" "Net-(D16-Pad2)" "Net-(D17-Pad1)" "Net-(D17-Pad2)"
-      "Net-(D19-Pad1)" "Net-(D4-Pad1)" "Net-(D5-Pad1)" "Net-(D6-Pad2)" "Net-(D8-Pad1)"
-      "Net-(JP1-Pad2)" "Net-(P1-Pad3)" "Net-(P1-Pad4)" "Net-(P1-Pad7)" "Net-(P1-Pad8)"
-      "Net-(P2-Pad1)" "Net-(P3-Pad1)" "Net-(P8-Pad1)" "Net-(R10-Pad2)" "Net-(R12-Pad2)"
-      "Net-(R15-Pad2)" "Net-(R4-Pad1)" "Net-(R8-Pad1)" "Net-(R9-Pad2)" "Net-(U1-Pad10)"
-      "Net-(U1-Pad12)" "Net-(U1-Pad14)" "Net-(U1-Pad4)" "Net-(U1-Pad8)" "Net-(U2-Pad10)"
-      "Net-(U2-Pad12)" "Net-(U2-Pad14)" "Net-(U2-Pad4)" "Net-(U2-Pad8)" "Net-(U3-Pad22)"
-      "Net-(U3-Pad23)" "Net-(U3-Pad24)" "Net-(U3-Pad25)" "Net-(U3-Pad31)"
-      "Net-(U3-Pad5)" "Net-(U3-Pad7)"
+    (class kicad_default "" +12V +48V +5V GND "Net-(C10-Pad2)" "Net-(C16-Pad1)"
+      "Net-(C17-Pad2)" "Net-(C18-Pad1)" "Net-(C19-Pad2)" "Net-(C20-Pad1)"
+      "Net-(C21-Pad1)" "Net-(C22-Pad1)" "Net-(C23-Pad1)" "Net-(C23-Pad2)"
+      "Net-(C24-Pad1)" "Net-(C24-Pad2)" "Net-(C25-Pad1)" "Net-(C4-Pad2)" "Net-(C6-Pad1)"
+      "Net-(C6-Pad2)" "Net-(C7-Pad1)" "Net-(C7-Pad2)" "Net-(D10-Pad1)" "Net-(D10-Pad2)"
+      "Net-(D11-Pad2)" "Net-(D14-Pad2)" "Net-(D15-Pad1)" "Net-(D16-Pad2)"
+      "Net-(D17-Pad1)" "Net-(D17-Pad2)" "Net-(D19-Pad1)" "Net-(D4-Pad1)" "Net-(D5-Pad1)"
+      "Net-(D6-Pad2)" "Net-(D8-Pad1)" "Net-(JP1-Pad2)" "Net-(P1-Pad3)" "Net-(P1-Pad4)"
+      "Net-(P1-Pad7)" "Net-(P1-Pad8)" "Net-(P2-Pad1)" "Net-(P8-Pad1)" "Net-(R10-Pad2)"
+      "Net-(R12-Pad2)" "Net-(R15-Pad2)" "Net-(R4-Pad1)" "Net-(R8-Pad1)" "Net-(R9-Pad2)"
+      "Net-(U1-Pad10)" "Net-(U1-Pad12)" "Net-(U1-Pad14)" "Net-(U1-Pad4)" "Net-(U1-Pad8)"
+      "Net-(U2-Pad10)" "Net-(U2-Pad12)" "Net-(U2-Pad14)" "Net-(U2-Pad4)" "Net-(U2-Pad8)"
+      "Net-(U3-Pad22)" "Net-(U3-Pad23)" "Net-(U3-Pad24)" "Net-(U3-Pad25)"
+      "Net-(U3-Pad31)" "Net-(U3-Pad5)" "Net-(U3-Pad7)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
